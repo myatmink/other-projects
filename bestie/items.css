@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Redressed&display=swap');
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+    overflow-x: hidden;
+    /* overflow-y: hidden; */
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    background-color: #f4f4f4;
+}
+
+nav{
+    width: 100vw;
+    height: 50px;
+    background-color: #fff;
+    box-shadow: 0 2px 7px rgba(0,0,0,0.2);
+    /* border-bottom: 1px solid #000; */
+
+    display: flex;
+    justify-content: space-around;
+
+    position: fixed;
+    top: 0;
+}
+
+nav ul{
+    list-style: none;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav > a{
+    font-family: 'Redressed', cursive;
+    font-weight: bold;
+    line-height: 50px;
+    font-size: 25px;
+    color: brown;    
+}
+
+nav ul li{
+    letter-spacing: 1px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav ul li a{
+    color: #000;
+}
+
+nav ul li a:hover{
+    color: blue;
+}
+
+.filter{
+    width: 70%;
+    height: 40px;
+    /* background-color: #fff; */
+    border-radius: 50px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+
+    display: flex;
+    justify-content: space-around;
+
+    margin: 40px auto;
+    margin-top: 100px;
+}
+
+.filter a{
+    width: calc(100%/3);
+    background-color: #fff;
+    color: #000;
+    text-align: center;
+    font-weight: bold;
+    line-height: 40px;
+    letter-spacing: 2px;
+    border-right: 1px solid #999;
+
+    transition: all 0.5s;
+}
+
+.filter a:last-child{
+    border: none;
+}
+
+/* .filter a:hover{
+    background-color: #000;
+    color: #fff;
+    
+} */
+
+.grid{
+    margin: 20px 30px;
+}
+
+.grid h2{
+    margin: 20px 0;
+}
+
+.grid > div{
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.1);
+
+    display: grid;
+    /* grid-template-columns: repeat(5,1fr); */
+    grid-template-columns: repeat(auto-fill, minmax(240px,1fr));
+    
+    /* margin: 0 30px; */
+    padding: 30px 50px;
+}
+
+.grid .item{
+    width: 200px;
+
+    margin: 20px 40px;
+
+    cursor: pointer;
+}
+
+.grid .item > div{
+    width: 200px;
+    height: 200px;
+    border-radius: 7px;
+
+    overflow: hidden;
+}
+
+.grid .item > div img:not(.width){
+    height: 100%;
+}
+
+.width{
+    width: 100%;
+    margin-top: -25px;
+}
+
+.grid h3{
+    height: 50px;
+    margin-top: 10px;
+}
+
+.hidden{
+    display: none;
+}
+
+button{
+    width: 60px;
+    height: 60px;
+    background-color: #FF5F6D;
+    color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.4   );
+    border: none;
+
+    position: fixed;
+    bottom: 2%;
+    right: 1%;
+
+    cursor: pointer;
+    overflow: hidden;
+}
+
+button i{
+    font-size: 20px;
+}
+
+
+footer{
+    background-color: #222;
+    display: flex;
+    justify-content: space-around;
+
+    padding: 30px;
+}
+
+.navfoot ul li a{
+    display: inline-block;
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin: 7px;
+}
+
+footer a:hover{
+    text-decoration: underline;
+}
+
+.navfoot p{
+    color: #fff;
+    font-size: 12px;
+    margin-top: 20px;
+}
+
+.contactfoot h4{
+    color: #fff;
+}
+
+.contactfoot p{
+    color: #fff;
+}
+
+.logofoot{
+    width: 200px;
+    text-align: center;
+}
+
+.logofoot img{
+    width: 100px;
+    cursor: pointer;
+}
+
+.logofoot h3{
+    font-family: 'Redressed', cursive;
+    color: #fff;
+    margin-top: 10px;
+}
+
+.contactfoot a,
+.contactfoot i{
+    color: #fff;
+}
+
+.contactfoot > div{
+    margin-top: 10px;
+}
+
+.contactfoot a{
+    display: block;
+    letter-spacing: 2px;
+    margin: 10px;
+}
+
+.overlay{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    z-index: 5;
+}
+
+.modal{
+    width: 70%;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    z-index: 10;
+
+    padding: 50px;
+
+    transform: translate(-50%,-50%);
+}
+

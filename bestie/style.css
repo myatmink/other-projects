@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Redressed&display=swap');
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+    overflow-x: hidden;
+}
+
+a{
+    text-decoration: none;
+}
+
+nav{
+    width: 100vw;
+    height: 50px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+
+    display: flex;
+    justify-content: space-around;
+
+    position: fixed;
+    top: 0;
+}
+
+nav ul{
+    list-style: none;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav > a{
+    font-family: 'Redressed', cursive;
+    font-weight: bold;
+    line-height: 50px;
+    font-size: 25px;
+    color: brown;    
+}
+
+nav ul li{
+    letter-spacing: 1px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav ul li a{
+    color: #000;
+}
+
+nav ul li a:hover{
+    color: blue;
+}
+
+.headimg{
+    width: 100vw;
+    height:600px;
+    /* background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url('img/img1.jpg'); */
+    background-size: cover;
+}
+
+
+
+footer{
+    background-color: #222;
+    display: flex;
+    justify-content: space-around;
+
+    padding: 30px;
+}
+
+.navfoot ul li a{
+    display: inline-block;
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin: 7px;
+}
+
+footer a:hover{
+    text-decoration: underline;
+}
+
+.navfoot p{
+    color: #fff;
+    font-size: 12px;
+    margin-top: 20px;
+}
+
+.contactfoot h4{
+    color: #fff;
+}
+
+.contactfoot p{
+    color: #fff;
+}
+
+.logofoot{
+    width: 200px;
+    text-align: center;
+}
+
+.logofoot img{
+    width: 100px;
+    cursor: pointer;
+}
+
+.logofoot h3{
+    font-family: 'Redressed', cursive;
+    color: #fff;
+    margin-top: 10px;
+}
+
+.contactfoot a,
+.contactfoot i{
+    color: #fff;
+}
+
+.contactfoot > div{
+    margin-top: 10px;
+}
+
+.contactfoot a{
+    display: block;
+    letter-spacing: 2px;
+    margin: 10px;
+}

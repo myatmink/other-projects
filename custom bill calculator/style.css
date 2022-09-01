@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  color: #fff;
+  background: #1572a1;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+main {
+  max-width: 100%;
+  max-height: 100%;
+  background: #1572a1;
+  /* border-radius: 4rem; */
+  /* box-shadow: 0 2px 2px lightgray; */
+
+  padding: 3rem 1.6rem;
+  /* margin: 2rem auto; */
+}
+
+h1 {
+  font-family: "Archivo Black", sans-serif;
+  /* height: 7rem; */
+  display: inline-block;
+  /* text-align: center; */
+  /* line-height: 7rem; */
+  font-size: 3rem;
+  color: #eee;
+  border-left: 4px solid #eee;
+  /* background-color: rgba(0,0,0,0.3); */
+
+  /* padding-bottom: 3rem; */
+  padding: 0 1rem;
+  margin-bottom: 3rem;
+}
+
+.total,
+.result {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 1.5rem;
+}
+
+section {
+  background: none;
+  font-size: 1.8rem;
+  border-radius: 0.4rem;
+  /* box-shadow: inset 0 2px 2px lightgray; */
+
+  /* padding: 0 1.6rem; */
+  margin-bottom: 1.6rem;
+}
+
+section > div {
+  padding: 1.6rem 1.6rem;
+}
+
+.bill {
+  display: flex;
+}
+
+.bill label {
+  flex: 1;
+  align-self: center;
+}
+
+.bill input {
+  flex: 2;
+  box-sizing: border-box;
+}
+
+input[type="number"] {
+  font-family: inherit;
+  background: #f4f4f5;
+  font-size: 1.6rem;
+  border: 1px solid lightgray;
+  border-radius: 0.5rem;
+  box-shadow: inset 0 2px 2px lightgray;
+
+  padding: 0.8rem;
+}
+
+.space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.total,
+.result {
+  font-size: 2.5rem;
+  font-weight: bolder;
+}
+
+.range {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 8px;
+  background: #eee;
+  margin-top: 1.2rem;
+  border-radius: 0.3rem;
+  outline-color: #5bceae;
+}
+
+.range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+  /* background: #3dc0c0;  */
+  background: #444;
+  cursor: pointer;
+}
+
+.last {
+  text-align: center;
+}

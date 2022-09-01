@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <title>Bill Calculator</title>
+  </head>
+  <body>
+    <main id="container">
+      <h1>Bill Calculator</h1>
+
+      <section>
+        <div class="bill">
+          <label for="yourBill">Bill</label>
+          <input
+            type="number"
+            placeholder="Your bill amount"
+            id="yourBill"
+            onclick="update()"
+          />
+        </div>
+
+        <div>
+          <div class="space-between">
+            <label for="tipInput">Select percentage</label>
+            <span id="tipPercent">0%</span>
+          </div>
+          <input type="range" value="0" id="tipInput" class="range" />
+        </div>
+
+        <div class="space-between">
+          <span>Percentage amount</span>
+          <span id="tipValue"></span>
+        </div>
+
+        <!-- <hr /> -->
+
+        <div class="space-between total">
+          <span>Total</span>
+          <span id="totalWithTip"></span>
+        </div>
+      </section>
+
+      <hr />
+
+      <section>
+        <div>
+          <div class="space-between">
+            <label for="splitInput">Split</label>
+            <span id="splitValue">1 person</span>
+          </div>
+          <input
+            type="range"
+            min="1"
+            max="10"
+            value="1"
+            id="splitInput"
+            class="range"
+          />
+        </div>
+
+        <div class="space-between">
+          <span>Percentage amount each</span>
+          <span id="tipEach"></span>
+        </div>
+
+        <div class="space-between result">
+          <span class="billeach">Total bill each</span>
+          <span id="billEach"></span>
+        </div>
+      </section>
+    </main>
+
+    <div class="last">
+      <p>Developed by MMK</p>
+    </div>
+
+    <script type="text/javascript">
+      function formatMoney(value) {
+        value = value.toFixed(2);
+        return "$ " + value;
+      }
+
+      function formatSplit(value) {
+        if (value === "1") return value + " person";
+        return value + " people";
+      }
+
+      function update() {
+        let bill = Number(document.getElementById("yourBill").value);
+        let tipPercent = document.getElementById("tipInput").value;
+        let split = document.getElementById("splitInput").value;
+
+        let tipValue = bill * (tipPercent / 100);
+        let tipEach = tipValue / split;
+        let newBillEach = (bill + tipValue) / split;
+
+        document.getElementById("tipPercent").textContent = tipPercent + "%";
+        document.getElementById("tipValue").textContent = formatMoney(tipValue);
+        document.getElementById("totalWithTip").textContent = formatMoney(
+          bill + tipValue
+        );
+        document.getElementById("splitValue").textContent = formatSplit(split);
+        document.getElementById("billEach").textContent =
+          formatMoney(newBillEach);
+        document.getElementById("tipEach").textContent = formatMoney(tipEach);
+      }
+
+      let container = document.getElementById("container");
+      container.addEventListener("input", update);
+    </script>
+  </body>
+</html>
